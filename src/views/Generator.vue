@@ -1,8 +1,22 @@
 <template>
   <div>
-    <header class="bg-gradient-to-r from-blue-800 to-blue-700 h-36 flex justify-center flex-col ">
-      <h1 class="text-center mt-0 text-white font-bold text-4xl font-mono">Resuminator</h1>
-      <p class="text-center text-sm mb-5 text-white font-mono">Adichan paru appointment order....</p>
+    <header
+      class="
+        bg-gradient-to-r
+        from-blue-800
+        to-blue-700
+        h-36
+        flex
+        justify-center
+        flex-col
+      "
+    >
+      <h1 class="text-center mt-0 text-white font-bold text-4xl font-mono">
+        Resuminator
+      </h1>
+      <p class="text-center text-sm mb-5 text-white font-mono">
+        Adichan paru appointment order....
+      </p>
     </header>
     <section
       class="
@@ -15,54 +29,38 @@
         flex flex-col
         lg:flex-row
       "
-      
     >
-      <div class="bg-white p-4 shadow-lg rounded ">
-        <h3 class="font-bold">Sections</h3>
+      <div class="bg-white p-4 shadow-lg rounded">
+       <div class="flex flex-col justify-between items-center">
+          <h3 class="font-bold">Sections</h3>
         <p class="text-sm text-gray-500">
           Choose a section to start adding data
         </p>
-        <div class="grid grid-cols-4 lg:grid-cols-2 gap-3 mt-5 
-              text-gray-500">
+        <div class="grid grid-cols-4 lg:grid-cols-2 gap-3 mt-5 text-gray-500 w-full">
           <!-- Personal -->
           <a
-            @click="form='personal'"
+            @click="form = 'personal'"
             href="#"
-            class="
-              bg-red-
-              p-3
-              rounded-md
-              shadow
-              flex flex-col
-              items-center
-            "
-            :class="form=='personal'?'bg-blue-600 text-white':''"
+            class="bg-red- p-3 rounded-md shadow flex flex-col items-center"
+            :class="form == 'personal' ? 'bg-blue-600 text-white' : ''"
           >
             <i class="bx bxs-user text-2xl"></i>
             <p class="text-sm">Personal</p>
           </a>
           <!-- Education -->
           <a
-            @click="form='education'"
-            :class="form=='education'?'bg-blue-600 text-white':''"
-
+            @click="form = 'education'"
+            :class="form == 'education' ? 'bg-blue-600 text-white' : ''"
             href="#"
-            class="
-              bg-red-
-              p-3
-              rounded-md
-              shadow
-              flex flex-col
-              items-center
-            "
+            class="bg-red- p-3 rounded-md shadow flex flex-col items-center"
           >
             <i class="bx bxs-book-alt text-2xl"></i>
             <p class="text-sm">Education</p>
           </a>
           <!-- Experience -->
           <a
-            @click="form='experience'"
-            :class="form=='experience'?'bg-blue-600 text-white':''"
+            @click="form = 'experience'"
+            :class="form == 'experience' ? 'bg-blue-600 text-white' : ''"
             href="#"
             class="
               bg-red-
@@ -94,37 +92,50 @@
             <p class="text-sm">Languages</p>
           </a>
         </div>
+        <div>
+          <button @click="generateReport" class="bg-blue-600 text-white px-3 py-2 rounded mt-5 shadow-lg">Generate PDF</button>
+        </div>
+       </div>
       </div>
-      <div class="bg-white p-3 shadow-lg rounded flex-1 max-h-screen overflow-y-auto overflow-x-hidden">
-        <personal-details v-show="form=='personal'"/>
-        <educational-details v-show="form=='education'"/>
-        <work-details v-show="form=='experience'"/>
+      <div
+        class="
+          bg-white
+          p-3
+          shadow-lg
+          rounded
+          flex-1
+          max-h-screen
+          overflow-y-auto overflow-x-hidden
+        "
+      >
+        <personal-details v-show="form == 'personal'" />
+        <educational-details v-show="form == 'education'" />
+        <work-details v-show="form == 'experience'" />
       </div>
     </section>
-    <resume-one :resume="resume"/>
+    <resume-one :resume="resume" />
   </div>
 </template>
 
 <script>
 import html2pdf from "html2pdf.js";
-import ResumeOne from '../components/ResumeOne.vue';
-import PersonalDetails from '../components/Forms/PersonalDetails.vue';
-import EducationalDetails from '../components/Forms/EducationalDetails.vue';
-import WorkDetails from '../components/Forms/WorkDetails.vue';
+import ResumeOne from "../components/ResumeOne.vue";
+import PersonalDetails from "../components/Forms/PersonalDetails.vue";
+import EducationalDetails from "../components/Forms/EducationalDetails.vue";
+import WorkDetails from "../components/Forms/WorkDetails.vue";
 // import {useStore} from "vuex";
 export default {
-  computed:{
+  computed: {
     name: {
-      get () {
-        return this.$store.state.resume.name
+      get() {
+        return this.$store.state.resume.name;
       },
-      set (value) {
-        this.$store.commit('updateResume', {key:"name",val:value})
-      }
-    }
+      set(value) {
+        this.$store.commit("updateResume", { key: "name", val: value });
+      },
+    },
   },
   methods: {
-    
     generateReport() {
       var element = document.getElementById("element-to-print");
       var opt = {
@@ -143,20 +154,19 @@ export default {
       html2pdf().from(element).set(opt).save();
     },
   },
-  data:function(){
+  data: function () {
     return {
-      form:"personal",
-      resume:{
-        name:"",
-        image:"",
-        website:"",
-        role:""
-      }
-    }
+      form: "personal",
+      resume: {
+        name: "",
+        image: "",
+        website: "",
+        role: "",
+      },
+    };
   },
-  components: {ResumeOne, PersonalDetails, EducationalDetails, WorkDetails},
+  components: { ResumeOne, PersonalDetails, EducationalDetails, WorkDetails },
 };
 </script>
 
-<style>
-</style>
+<style></style>
