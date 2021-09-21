@@ -3,7 +3,7 @@
   <div id="persoanl">
           <h1 class="font-bold">Personal Details</h1>
           <p class="text-sm text-gray-500">
-            Enter your personal details
+           Personal details on your resume serves a great purpose and are used for identification purposes and getting in touch with you.
           </p>
           <div class="mt-5">
             <div class="grid md:grid-cols-3 gap-4">

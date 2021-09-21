@@ -5,7 +5,7 @@
               <div>
                     <h1 class="font-bold">Area of Interest</h1>
                     <p class="text-sm text-gray-500">
-                        Enter your area of interest
+                        Having an area of interest not only shows that you have a life with different facets but also proves that you are a time manager. The kind of hobbies and interests that you put in your resume can give an employer in-depth knowledge about you as a manager, whether you are decisive or not?
                     </p>
               </div>
               <button @click="addLang" class="bg-blue-600 px-3 py-1 rounded text-white mt-2">Add</button>

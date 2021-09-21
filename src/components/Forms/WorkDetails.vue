@@ -5,7 +5,7 @@
               <div>
                     <h1 class="font-bold">Experience Details</h1>
                     <p class="text-sm text-gray-500">
-                        Enter your experience details
+                        For many employers, your work experience section is one of the most important parts of your resume. This section gives them a quick idea of your employment history. It also indicates that you possess the skills and experience necessary to succeed in the role you are applying for.
                     </p>
               </div>
               <button @click="addWork" class="bg-blue-600 px-3 py-1 rounded text-white mt-2">Add</button>

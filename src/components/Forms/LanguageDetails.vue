@@ -5,7 +5,7 @@
               <div>
                     <h1 class="font-bold">Languages</h1>
                     <p class="text-sm text-gray-500">
-                        Enter languages you know
+                        If you speak one additional language or your languages are not important for the position, adding them to your skills section can help you save space on your resume 😅
                     </p>
               </div>
               <button @click="addLang" class="bg-blue-600 px-3 py-1 rounded text-white mt-2">Add</button>

@@ -5,7 +5,7 @@
               <div>
                     <h1 class="font-bold">Educational Details</h1>
                     <p class="text-sm text-gray-500">
-                        Enter your educational details
+                        A well-written education summary can show recruiters your relevant academic qualifications and set you apart from other candidates. Hiring managers look at your education summary to see if you have the right academic background for the job.
                     </p>
               </div>
               <button @click="addEdu" class="bg-blue-600 px-3 py-1 rounded text-white mt-2">Add</button>

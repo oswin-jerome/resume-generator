@@ -5,7 +5,7 @@
               <div>
                     <h1 class="font-bold">Skill set</h1>
                     <p class="text-sm text-gray-500">
-                        Enter your skillset
+                        They can relate to an ability to fit into a company’s work culture, handle stress, communicate clearly or play well with others
                     </p>
               </div>
               <button @click="addLang" class="bg-blue-600 px-3 py-1 rounded text-white mt-2">Add</button>

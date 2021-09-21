@@ -3,7 +3,7 @@
   <div id="persoanl">
           <h1 class="font-bold">Contact Details</h1>
           <p class="text-sm text-gray-500">
-            Enter your contact details
+            If you’re the most qualified person in the world, it’s not going to matter much if the hiring manager can’t contact you!
           </p>
           <div class="mt-5">
             <div class="grid md:grid-cols-3 gap-4">
