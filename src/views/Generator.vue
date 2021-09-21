@@ -25,22 +25,12 @@
             class=" grid grid-cols-4 lg:grid-cols-2 gap-3 mt-5 text-gray-500 w-full "
           >
             <!-- Personal -->
-            <a
-              @click="form = 'personal'"
-              href="#"
-              class="bg-red- p-3 rounded-md shadow flex flex-col items-center"
-              :class="form == 'personal' ? 'bg-blue-600 text-white' : ''"
-            >
+            <a @click="form = 'personal'" href="#" class="bg-red- p-3 rounded-md shadow flex flex-col items-center" :class="form == 'personal' ? 'bg-blue-600 text-white' : ''" >
               <i class="bx bxs-user text-2xl"></i>
               <p class="text-sm">Personal</p>
             </a>
             <!-- Education -->
-            <a
-              @click="form = 'education'"
-              :class="form == 'education' ? 'bg-blue-600 text-white' : ''"
-              href="#"
-              class="p-3 rounded-md shadow flex flex-col items-center"
-            >
+            <a @click="form = 'education'" :class="form == 'education' ? 'bg-blue-600 text-white' : ''" href="#" class="p-3 rounded-md shadow flex flex-col items-center" >
               <i class="bx bxs-book-alt text-2xl"></i>
               <p class="text-sm">Education</p>
             </a>
@@ -81,6 +71,11 @@
               <i class="bx bx-globe text-2xl"></i>
               <p class="text-sm">Areas of intrest</p>
             </a>
+            <a
+             @click="form = 'main-section'" :class="form == 'main-section' ? 'bg-blue-600 text-white' : ''" href="#" class="bg-red- p-3 rounded-md shadow flex flex-col items-center" >
+              <i class="bx bx-globe text-2xl"></i>
+              <p class="text-sm">Addon section</p>
+            </a>
           </div>
           <div>
             <button @click="generateReport" class=" bg-blue-600 hover:bg-blue-700 hover: ring-4 text-white px-3 py-2 rounded mt-5 shadow-lg " >
@@ -97,6 +92,7 @@
         <language-details v-show="form == 'language'" />
         <interest v-show="form == 'intrest'" />
         <skill-details v-show="form == 'skill'" />
+        <main-form v-show="form == 'main-section'" />
       </div>
     </section>
     <resume-one :resume="resume" />
@@ -113,6 +109,7 @@ import ContactDetails from "../components/Forms/ContactDetails.vue";
 import LanguageDetails from '../components/Forms/LanguageDetails.vue';
 import Interest from '../components/Forms/Interest.vue';
 import SkillDetails from '../components/Forms/SkillDetails.vue';
+import MainForm from '../components/Forms/MainForm.vue';
 // import {useStore} from "vuex";
 export default {
   computed: {
@@ -164,6 +161,7 @@ export default {
     LanguageDetails,
     Interest,
     SkillDetails,
+    MainForm,
   },
 };
 </script>

@@ -7,6 +7,10 @@
           <!-- Left -->
         <div class="bg-blue-900 px-8 pt-3 pb-3 h-screen ">
           <img class="rounded-full mt-6 w-56 h-56 object-cover" :src="resume.image" alt="" />
+          <h3 class="mt-5 text-2xl mb-2 font-bold text-white">Personal Details</h3>
+          <p class="text-white opacity-80 text-sm "><span><i class='mr-1 mt-1 bx bx-map-alt'></i></span> <pre class="inline ">{{resume.address}}</pre> </p>
+          <p class="text-white opacity-80 text-sm "><span><i class='mr-1 mt-2 bx bxs-calendar'></i></span> {{resume.dob}}</p>
+         
           <h3 class="mt-5 text-2xl mb-2 font-bold text-white">Contact</h3>
           <p class="text-white opacity-80 text-sm "><span><i class='bx bx-mail-send mr-1 mt-1'></i></span> {{resume.email}}</p>
           <p class="text-white opacity-80 text-sm"> <span><i class='bx bxs-phone-call mr-1 mt-1' ></i></span>{{resume.phone}}</p>

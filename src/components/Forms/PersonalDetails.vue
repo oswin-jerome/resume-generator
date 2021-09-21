@@ -23,6 +23,20 @@
                 <label for="" class="block">Date of birth</label>
                 <input v-model="dob" type="date" class="rounded border-gray-400 w-full bg-gray-100">
               </div>
+              <div>
+                <label for="" class="block">Father's Name</label>
+                <input v-model="fname" type="text" class="rounded border-gray-400 w-full bg-gray-100">
+              </div>
+              <div>
+                <label for="" class="block">Aadhar number</label>
+                <input v-model="aadhar" type="text" class="rounded border-gray-400 w-full bg-gray-100">
+              </div>
+              <div class="row-span-2 col-start-1">
+                <label for="" class="block">Address</label>
+                <!-- <input v-model="dob" type="date" class="rounded border-gray-400 w-full bg-gray-100"> -->
+                <textarea rows="5" v-model="address" class="rounded border-gray-400 w-full bg-gray-100" ></textarea>
+              </div>
+              
             </div>
           </div>
         </div>
@@ -39,6 +53,22 @@ export default {
       set (value) {
         this.$store.commit('updateResume', {key:"name",val:value})
       }
+    },
+    aadhar: {
+      get () {
+        return this.$store.state.resume.aadhar
+      },
+      set (value) {
+        this.$store.commit('updateResume', {key:"aadhar",val:value})
+      }
+    },
+    fname: {
+      get () {
+        return this.$store.state.resume.fname
+      },
+      set (value) {
+        this.$store.commit('updateResume', {key:"fname",val:value})
+      }
     }
     ,dob: {
       get () {
@@ -54,6 +84,14 @@ export default {
       },
       set (value) {
         this.$store.commit('updateResume', {key:"role",val:value})
+      }
+    },
+    address: {
+      get () {
+        return this.$store.state.resume.address
+      },
+      set (value) {
+        this.$store.commit('updateResume', {key:"address",val:value})
       }
     }
   },
