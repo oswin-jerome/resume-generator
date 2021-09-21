@@ -67,6 +67,11 @@
               <p class="text-sm">Skillset</p>
             </a>
             <a
+             @click="form = 'summary-section'" :class="form == 'summary-section' ? 'bg-blue-600 text-white' : ''" href="#" class="bg-red- p-3 rounded-md shadow flex flex-col items-center" >
+              <i class="bx bx-globe text-2xl"></i>
+              <p class="text-sm">Summary</p>
+            </a>
+            <a
              @click="form = 'intrest'" :class="form == 'intrest' ? 'bg-blue-600 text-white' : ''" href="#" class="bg-red- p-3 rounded-md shadow flex flex-col items-center" >
               <i class="bx bx-globe text-2xl"></i>
               <p class="text-sm">Areas of intrest</p>
@@ -93,6 +98,7 @@
         <interest v-show="form == 'intrest'" />
         <skill-details v-show="form == 'skill'" />
         <main-form v-show="form == 'main-section'" />
+        <summary-details v-show="form == 'summary-section'" />
       </div>
     </section>
     <resume-one :resume="resume" />
@@ -110,6 +116,7 @@ import LanguageDetails from '../components/Forms/LanguageDetails.vue';
 import Interest from '../components/Forms/Interest.vue';
 import SkillDetails from '../components/Forms/SkillDetails.vue';
 import MainForm from '../components/Forms/MainForm.vue';
+import SummaryDetails from '../components/Forms/SummaryDetails.vue';
 // import {useStore} from "vuex";
 export default {
   computed: {
@@ -162,6 +169,7 @@ export default {
     Interest,
     SkillDetails,
     MainForm,
+    SummaryDetails,
   },
 };
 </script>

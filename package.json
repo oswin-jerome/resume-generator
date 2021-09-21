@@ -10,6 +10,9 @@
   "dependencies": {
     "@tailwindcss/forms": "^0.3.3",
     "@tailwindcss/postcss7-compat": "^2.0.2",
+    "@tiptap/starter-kit": "^2.0.0-beta.107",
+    "@tiptap/vue-3": "^2.0.0-beta.61",
+    "@vueup/vue-quill": "^1.0.0-beta.7",
     "autoprefixer": "^9",
     "boxicons": "^2.0.9",
     "core-js": "^3.6.5",
@@ -18,6 +21,7 @@
     "register-service-worker": "^1.7.1",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",
     "vue": "^3.0.0",
+    "vue-quill-editor": "^3.0.6",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0"
   },

@@ -35,11 +35,15 @@
             <div class="h-0.5 bg-red-500 w-32 mt-2 block"></div>
             <h3 class="mt-0">{{resume.role}}</h3>
           </div>
+          <div class="p-3" v-if="resume.summary.length>0">
+              <h1 class="text-2xl font-bold text-blue-800">Summary</h1>
+              <p>{{resume.summary}}</p>
+          </div>
           <div class="p-3" v-if="resume.educations.length>0">
               <h1 class="text-2xl font-bold text-blue-800">Educations</h1>
               <ul class=" list-inside mt-2 flex flex-col gap-3">
                   <li class="" v-for="(edu,index) in resume.educations" :key="index">
-                      <h1 class="font-bold">{{edu.name}} <span class="font-normal italic text-sm" v-if="edu.from!=''">- {{edu.from}} to {{edu.to}}</span> </h1>
+                      <h1 class="font-bold"> {{edu.name}} <span class="font-normal italic text-sm" v-if="edu.from!=''">- {{edu.from}} to {{edu.to}}</span> </h1>
                     <p class="text-base text-gray-500">{{edu.degree}}</p>
                   </li>
               </ul>
@@ -52,6 +56,19 @@
                     <p class="text-base text-gray-500">{{exp.degree}}</p>
                   </li>
               </ul>
+          </div>
+          <div class="p-3" v-for="(section,ind) in resume.addonmains" :key="ind">
+              <h1 class="text-2xl font-bold text-blue-800">{{section.title}}</h1>
+              <ul class=" list-inside mt-2 flex flex-col gap-3">
+                  <li class="" v-for="(exp,index) in section.items" :key="index">
+                      <h1 class="font-bold">{{exp.heading}} <span class="font-normal italic text-sm" v-if="exp.trailing">- {{exp.trailing}}</span> </h1>
+                    <p class="text-base text-gray-500">{{exp.subheading}}</p>
+                  </li>
+              </ul>
+          </div>
+          <div class="p-3" v-if="resume.decleration.length>0">
+              <h1 class="text-2xl font-bold text-blue-800">Decleration</h1>
+              <p>{{resume.decleration}}</p>
           </div>
         </div>
       </div>
