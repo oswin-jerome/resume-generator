@@ -28,7 +28,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/resume-generator/js/chunk-vendors.540cf608.js"
   },
   {
-    "revision": "9b5ff4983b53e67cb151de87c9e888ed",
+    "revision": "f35ea386b6c0bb0da63b6cafddeb09a5",
     "url": "/resume-generator/manifest.json"
   },
   {
