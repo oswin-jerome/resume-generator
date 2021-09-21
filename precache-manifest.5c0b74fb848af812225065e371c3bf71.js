@@ -4,7 +4,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/resume-generator/css/app.77c594f1.css"
   },
   {
-    "revision": "452264c8520c296f6efd3e452237ab7a",
+    "revision": "a72f963be3a3ecb314048c839806f7c1",
+    "url": "/resume-generator/favicon_1.ico"
+  },
+  {
+    "revision": "67a07a0c028a16b9a0737967b693bff0",
     "url": "/resume-generator/index.html"
   },
   {
@@ -24,7 +28,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/resume-generator/js/chunk-vendors.540cf608.js"
   },
   {
-    "revision": "205214b630931258b409679d5e239827",
+    "revision": "9b5ff4983b53e67cb151de87c9e888ed",
     "url": "/resume-generator/manifest.json"
   },
   {
