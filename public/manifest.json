@@ -1,5 +1,5 @@
 {
-    "name": "resume-generator",
+    "name": "Resume Generator",
     "short_name": "resume-generator",
     "theme_color": "#1E40AF",
     "icons": [
@@ -406,5 +406,5 @@
   ],
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#000000"
+    "background_color": "#1E40AF"
 }
