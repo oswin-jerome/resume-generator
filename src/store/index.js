@@ -5,8 +5,8 @@ export default createStore({
     resume:{
       name: 'Oswin Jerome',
       role:"Software Developer",
-      educations:[{name:"sd",from:''}],
-      experiences:[]
+      educations:[{name:"",from:''}],
+      experiences:[{from:''}]
     }
   },
   mutations: {
