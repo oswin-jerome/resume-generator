@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "998e707bb41ec9d3a997",
-    "url": "/resume-generator/css/app.77c594f1.css"
+    "revision": "3f38dfa35cbe4f026689",
+    "url": "/resume-generator/css/app.c5dfe336.css"
   },
   {
     "revision": "a72f963be3a3ecb314048c839806f7c1",
     "url": "/resume-generator/favicon_1.ico"
   },
   {
-    "revision": "d27aab6cf89ec281b87a39288fc214c7",
+    "revision": "537805f13e1b5250ae20f7861c0c2345",
     "url": "/resume-generator/index.html"
   },
   {
-    "revision": "998e707bb41ec9d3a997",
-    "url": "/resume-generator/js/app.ead90136.js"
+    "revision": "3f38dfa35cbe4f026689",
+    "url": "/resume-generator/js/app.0fda0369.js"
   },
   {
-    "revision": "b41920d2817bf2d0eacd",
-    "url": "/resume-generator/js/chunk-0c78ed8c.1d14ebec.js"
+    "revision": "50784d77df42cc6e63e1",
+    "url": "/resume-generator/js/chunk-0c78ed8c.ba24d216.js"
   },
   {
     "revision": "5ead77aae8b7551e10f9",
@@ -28,7 +28,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/resume-generator/js/chunk-vendors.540cf608.js"
   },
   {
-    "revision": "d43ce074e3627d0cadcd1f73fd6707a5",
+    "revision": "60a9aeee22b80d4fffafbfaa119b84cb",
     "url": "/resume-generator/manifest.json"
   },
   {
