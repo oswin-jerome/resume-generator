@@ -101,13 +101,19 @@
         <summary-details v-show="form == 'summary-section'" />
       </div>
     </section>
-    <resume-one :resume="resume" />
+    <div class="flex justify-center align-middle mb-5">
+    <button @click="changeTemplate" class=" bg-blue-600 hover:bg-blue-700 hover: ring-4 text-white px-3 py-2 rounded mt-5 shadow-lg ">Change template</button>
+
+    </div>
+    <resume-one v-if="template=='one'" :resume="resume" />
+    <resume-two v-if="template=='two'"  :resume="resume" />
   </div>
 </template>
 
 <script>
 import html2pdf from "html2pdf.js";
 import ResumeOne from "../components/ResumeOne.vue";
+import ResumeTwo from "../components/Resumes/ResumeTwo.vue";
 import PersonalDetails from "../components/Forms/PersonalDetails.vue";
 import EducationalDetails from "../components/Forms/EducationalDetails.vue";
 import WorkDetails from "../components/Forms/WorkDetails.vue";
@@ -130,6 +136,15 @@ export default {
     },
   },
   methods: {
+    changeTemplate(){
+      var ci = this.templates.indexOf(this.template);
+      var le = this.templates.length -1;
+      if(ci<le){
+        this.template = this.templates[ci+1];
+      }else{
+        this.template = this.templates[0];
+      }
+    },
     generateReport() {
       var element = document.getElementById("element-to-print");
       var opt = {
@@ -151,6 +166,8 @@ export default {
   data: function () {
     return {
       form: "personal",
+      templates: ["one","two"],
+      template:"one",
       resume: {
         name: "",
         image: "",
@@ -170,6 +187,7 @@ export default {
     SkillDetails,
     MainForm,
     SummaryDetails,
+    ResumeTwo
   },
 };
 </script>
